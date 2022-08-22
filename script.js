@@ -42,5 +42,5 @@ function Tweet() {
     var result_text = document.getElementById("result").value;
     result_text += "\n";
     result_text = result_text.replace(/\n/g, "%0A");
-    window.open("https://twitter.com/share?text=" + result_text + "&url=https://apteno-dytes.github.io/HaikuTweeter/", "_blank");
+    window.open("https://twitter.com/intent/tweet?text=" + result_text, "_blank");
 }
