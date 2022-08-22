@@ -6,27 +6,33 @@ function Refl() {
     name = "｜｜" + name;
     var maxlength = Math.max(Math.max(syoku.length, niku.length), Math.max(kekku.length, name.length));
     var result = "";
+    var spaces = "";
     for (var i = 0; i < maxlength; i++) {
+        spaces = "";
         if (i < name.length) {
-            result += name.charAt(i);
+            result = result + spaces + name.charAt(i);
+            spaces = "";
         } else {
-            result += "　";
+            spaces += "　";
         }
         result += "　";
         if (i < kekku.length) {
-            result += kekku.charAt(i);
+            result = result + spaces + kekku.charAt(i);
+            spaces = "";
         } else {
-            result += "　";
+            spaces += "　";
         }
         if (i < niku.length) {
-            result += niku.charAt(i);
+            result = result + spaces + niku.charAt(i);
+            spaces = "";
         } else {
-            result += "　";
+            spaces += "　";
         }
         if (i < syoku.length) {
-            result += syoku.charAt(i);
+            result = result + spaces + syoku.charAt(i);
+            spaces = "";
         } else {
-            result += "　";
+            spaces += "　";
         }
         if (i + 1 < maxlength) result += "\n";
     }
@@ -35,5 +41,5 @@ function Refl() {
 function Tweet() {
     var result_text = document.getElementById("result").value;
     result_text = result_text.replace(/\n/g, "%0A");
-    window.open("https://twitter.com/share?text=" + result_text, "_blank");
+    window.open("https://twitter.com/share?text=" + result_text + "&url= ", "_blank");
 }
