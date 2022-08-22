@@ -1,0 +1,11 @@
+.inner {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.center {
+    border: 1px solid rgb(170, 170, 170);
+    width: 500px;
+    text-align: center;
+}
