@@ -14,14 +14,16 @@
 <body>
     <div class="inner">
         <div class="center">
-            <h2>縦書き俳句・川柳<br>ツイート<br>ジェネレータ</h2>
+            <h2>縦書き俳句・川柳<br>ツイートジェネレータ</h2>
             初句：<input type="text" name="syoku" id="syoku" size="20" maxlength="24"><br>
             二句：<input type="text" name="niku" id="niku" size="20" maxlength="24"><br>
             結句：<input type="text" name="kekku" id="kekku" size="20" maxlength="24"><br>
             名前：<input type="text" name="name" id="name" size="20" maxlength="24"><br>
-            <input type="button" value="縦書きに変換" onclick="Refl()"><br>
-            結果：<br><textarea name="comment" id="result" cols="10" rows="8"></textarea><br>
-            <input type="button" value="ツイート" onclick="Tweet()"><br>
+            <label><input type="checkbox" id="atama">頭をずらす</label><br>
+            <a href="javascript:void(0)" class="reflbtn" onclick="Refl()">縦書きに変換</a><br><br>
+            結果<br><textarea name="comment" id="result" cols="10" rows="8"></textarea><br>
+            <a href="javascript:void(0)" class="twbtn" onclick="Tweet()">ツイート</a><br><br>
+            制作者：アプテノ(ダイト)(<a href="https://twitter.com/apteno_creates_">@apteno_creates_</a>)
         </div>
     </div>
     <script type="text/javascript" src="script.js"></script>

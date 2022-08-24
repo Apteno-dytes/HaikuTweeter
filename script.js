@@ -3,7 +3,14 @@ function Refl() {
     var niku = document.getElementById("niku").value;
     var kekku = document.getElementById("kekku").value;
     var name = document.getElementById("name").value;
-    name = "｜｜" + name;
+    var atama = document.getElementById("atama");
+    if (atama.checked) {
+        niku = "　" + niku;
+        kekku = "　　" + kekku;
+        name = "｜｜｜｜" + name;
+    } else {
+        name = "｜｜" + name;
+    }
     var maxlength = Math.max(Math.max(syoku.length, niku.length), Math.max(kekku.length, name.length));
     var result = "";
     var spaces = "";

@@ -7,3 +7,25 @@
     border: 1px solid rgb(170, 170, 170);
     text-align: center;
 }
+
+.reflbtn {
+    display: inline-block;
+    padding: 0.2em 3em;
+    background-color: #0fbe6c;
+    box-shadow: 0 5px 0 #0b9052;
+    border-radius: 60px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.twbtn {
+    display: inline-block;
+    padding: 0.2em 3em;
+    background-color: #139bf0;
+    box-shadow: 0 5px 0 #1083cb;
+    border-radius: 60px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
