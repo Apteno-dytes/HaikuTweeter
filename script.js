@@ -7,8 +7,12 @@ function Refl() {
     var atama = document.getElementById("atama");
     if (atama.checked) {
         niku = "　" + niku;
-        kekku = "　　" + kekku;
-        if (!is_noname) name = "｜｜｜｜" + name;
+        if (is_noname) {
+            kekku = "．　" + kekku;
+        }else{
+            kekku = "　　" + kekku;
+            name = "｜｜｜｜" + name;
+        }
     } else {
         if (!is_noname) name = "｜｜" + name;
     }
