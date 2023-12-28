@@ -3,26 +3,29 @@ function Refl() {
     var niku = document.getElementById("niku").value;
     var kekku = document.getElementById("kekku").value;
     var name = document.getElementById("name").value;
+    var is_noname = (name.length == 0);
     var atama = document.getElementById("atama");
     if (atama.checked) {
         niku = "　" + niku;
         kekku = "　　" + kekku;
-        name = "｜｜｜｜" + name;
+        if (!is_noname) name = "｜｜｜｜" + name;
     } else {
-        name = "｜｜" + name;
+        if (!is_noname) name = "｜｜" + name;
     }
     var maxlength = Math.max(Math.max(syoku.length, niku.length), Math.max(kekku.length, name.length));
     var result = "";
     var spaces = "";
     for (var i = 0; i < maxlength; i++) {
         spaces = "";
-        if (i < name.length) {
-            result = result + spaces + name.charAt(i);
-            spaces = "";
-        } else {
-            spaces += "　";
+        if (!is_noname){
+            if (i < name.length) {
+                result = result + spaces + name.charAt(i);
+                spaces = "";
+            } else {
+                spaces += "　";
+            }
+            result += "　";
         }
-        result += "　";
         if (i < kekku.length) {
             result = result + spaces + kekku.charAt(i);
             spaces = "";
